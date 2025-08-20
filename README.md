@@ -47,7 +47,7 @@ Serveur : db
  
 Utilisateur : votre_nom_utilisateur
  
-Mot de passe : notre_mot_de_passe
+Mot de passe : votre_mot_de_passe
  
 Base : cgvbot
  
