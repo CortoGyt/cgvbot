@@ -31,15 +31,14 @@ cd chatbot-cgv-moneshop
 À la racine du projet, crée un fichier .env :
  
 env
-OPENAI_API_KEY=...
+OPENAI_API_KEY=... \
 Ne partage jamais cette clé sur GitHub – le fichier .env est ignoré automatiquement.
  
 3. Installer les dépendances Python
 Active ton environnement virtuel puis :
- 
-pip install -r requirements.txt
+pip install -r requirements.txt \
 4. Lancer la base de données avec Docker
-docker-compose up -d
+docker-compose up -d \
 Accès à Adminer : http://localhost:8080
  
 Identifiants :
@@ -54,9 +53,10 @@ Base : cgvbot
  
 5. Créer la base et la table (dans Adminer ou en SQL)
 Structure du projet
-bash
-Copier
-Modifier
+bash \
+Copier \
+Modifier \
+'''
 chatbot_cgv/
 ├── chatbot_console.py     # Interface console
 ├── sql.py                 # Fonction pour enregistrer les échanges
@@ -66,3 +66,4 @@ chatbot_cgv/
 ├── .env                   # Clé API OpenAI (non commitée)
 ├── .gitignore             # Fichiers à ne pas versionner
 └── README.md              # Ce fichier
+'''
