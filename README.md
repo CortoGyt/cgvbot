@@ -55,7 +55,7 @@ Base : cgvbot
 Structure du projet
 bash \
 Copier \
-Modifier \
+Modifier 
 ```
 chatbot_cgv/
 ├── chatbot_console.py     # Interface console
