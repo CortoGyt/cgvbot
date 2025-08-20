@@ -56,7 +56,7 @@ Structure du projet
 bash \
 Copier \
 Modifier \
-'''
+```
 chatbot_cgv/
 ├── chatbot_console.py     # Interface console
 ├── sql.py                 # Fonction pour enregistrer les échanges
@@ -66,4 +66,4 @@ chatbot_cgv/
 ├── .env                   # Clé API OpenAI (non commitée)
 ├── .gitignore             # Fichiers à ne pas versionner
 └── README.md              # Ce fichier
-'''
+```
