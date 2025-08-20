@@ -32,7 +32,7 @@ cd chatbot-cgv-moneshop
  
 env
 OPENAI_API_KEY=... \
-Ne partage jamais cette clé sur GitHub – le fichier .env est ignoré automatiquement.
+le fichier .env est ignoré automatiquement. (Présent dans .gitignore)
  
 3. Installer les dépendances Python
 Active ton environnement virtuel puis :
@@ -45,14 +45,14 @@ Identifiants :
  
 Serveur : db
  
-Utilisateur :...
+Utilisateur : votre_nom_utilisateur
  
-Mot de passe : ...
+Mot de passe : notre_mot_de_passe
  
 Base : cgvbot
  
 5. Créer la base et la table (dans Adminer ou en SQL)
-Structure du projet
+Structure du projet : \
 bash \
 Copier \
 Modifier 
@@ -63,7 +63,7 @@ chatbot_cgv/
 ├── train/train.jsonl      # Fichier d'entraînement
 ├── docker-compose.yml     # MySQL + Adminer
 ├── requirements.txt       # Dépendances Python
-├── .env                   # Clé API OpenAI (non commitée)
+├── .env                   # Stockage des données sensibles (clé API, mot de passes, etc)
 ├── .gitignore             # Fichiers à ne pas versionner
 └── README.md              # Ce fichier
 ```
