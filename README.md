@@ -1,69 +1,67 @@
-# cgvbot
-Mon premier agent ia pour les conditions générales de ventes d'un site fictif d'e-commerce.
-
-Fonctionnalités :
-Envoie de questions via la console
+CGVbot
  
-Génération de réponses via un modèle OpenAI fin-tunning
+Un chatbot en ligne de commande capable de répondre automatiquement aux questions liées aux Conditions Générales de Vente (CGV) : rétractation, livraison, garanties, données personnelles, etc.
  
-Enregistrement des échanges dans une base MySQL (via Docker)
+Fonctionnalités
  
-Possibilité d’accéder à la BDD avec Adminer
+   Envoi de questions via la console
+   Génération de réponses via un modèle OpenAI fine-tuné
+   🗄Enregistrement des échanges dans une base MySQL (via Docker)
+   Possibilité d’accéder à la BDD avec Adminer
+   Pré-prompt métier intégré dans les données d’entraînement
+Technologies utilisées
  
-Pré-prompt métier intégré dans les données d'entraînement
- 
-Technologies utilisées :
-Python 3.10+
- 
-OpenAI API
- 
-MySQL 8 + Adminer
- 
-Docker / Docker Compose
- 
-python-dotenv, mysql-connector-python
+   -Python 3.10+
+   -OpenAI API
+   -MySQL 8 + Adminer
+   -Docker / Docker Compose
+   -python-dotenv, mysql-connector-python
  
 Installation
-1. Cloner le projet
-git clone https://github.com/<ton-pseudo>/chatbot-cgv-moneshop.git
-cd chatbot-cgv-moneshop
-2. Créer un fichier .env
-À la racine du projet, crée un fichier .env :
  
-env
-OPENAI_API_KEY=... \
-le fichier .env est ignoré automatiquement. (Présent dans .gitignore)
+1. Cloner le projet
+ 
+   git clone https://github.com/<ton-pseudo>/chatbot-cgv-moneshop.git
+ 
+   cd chatbot-cgv-moneshop
+ 
+2. Créer un fichier .env
+ 
+   OPENAI_API_KEY=xxxxxxxxxxxx
+ 
+Ne partage jamais ta clé API sur GitHub – le fichier .env est ignoré grâce à .gitignore.
  
 3. Installer les dépendances Python
-Active ton environnement virtuel puis :
-pip install -r requirements.txt \
+ 
+Active ton environnement virtuel puis installe :
+ 
+   pip install -r requirements.txt
+ 
 4. Lancer la base de données avec Docker
-docker-compose up -d \
-Accès à Adminer : http://localhost:8080
+   docker-compose up -d
  
-Identifiants :
+Structure du projet
  
-Serveur : db
- 
-Utilisateur : votre_nom_utilisateur
- 
-Mot de passe : votre_mot_de_passe
- 
-Base : cgvbot
- 
-5. Créer la base et la table (dans Adminer ou en SQL)
-Structure du projet : \
-bash \
-Copier \
-Modifier 
-```
 chatbot_cgv/
-├── chatbot_console.py     # Interface console
-├── sql.py                 # Fonction pour enregistrer les échanges
-├── train/train.jsonl      # Fichier d'entraînement
-├── docker-compose.yml     # MySQL + Adminer
-├── requirements.txt       # Dépendances Python
-├── .env                   # Stockage des données sensibles (clé API, mot de passes, etc)
-├── .gitignore             # Fichiers à ne pas versionner
-└── README.md              # Ce fichier
 ```
+├── chatbot_console.py     # Interface console
+ 
+├── sql.py                 # Fonctions pour enregistrer les échanges
+ 
+├── train/train.jsonl      # Fichier d'entraînement JSONL (fine-tuning)
+ 
+├── docker-compose.yml     # Services MySQL + Adminer
+ 
+├── requirements.txt       # Dépendances Python
+ 
+├── .env                   # Clé API OpenAI (non commitée)
+ 
+├── .gitignore             # Fichiers ignorés par Git
+ 
+└── README.md              # Documentation
+ ```
+Créateurs du projet
+ 
+[Khaoula MILI](https://github.com/khaoulaMili123)
+ 
+[Corto Gayet](https://github.com/CortoGyt)
